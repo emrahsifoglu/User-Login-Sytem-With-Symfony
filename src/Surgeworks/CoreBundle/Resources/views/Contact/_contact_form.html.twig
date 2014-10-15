@@ -1,0 +1,28 @@
+<div id="page-wrap">
+    <div id="contact-area">
+        <form id="contact-form" action="{{ path('contact_form_action') }}" method="post">
+            <label for="_name">Name:</label>
+            <input id="_name" data-min="1" data-max="32" data-required="true" data-type="text" type="text" data-error-valid="name" name="_name" placeholder="Your Full Name" />
+
+            <label for="_from">From:</label>
+            <input id="_from" data-required="true" data-type="email" type="email" data-error-valid="email" name="_from" placeholder="Valid Email Address" />
+
+            <label for="_subject">Subject:</label>
+            <input id="_subject" data-min="1" data-max="32" data-required="true" data-type="text" type="text" data-error-valid="subject" name="_subject" placeholder="Your Subject" />
+
+            <label for="_body">Message:</label><br />
+            <textarea id="_body" data-min="1" data-max="50" data-required="true" data-type="text" data-error-valid="body" name="_body" rows="20" cols="20" placeholder="Your Message"></textarea>
+
+            <label for="_to">Admin</label>
+            <select data-required="true" data-type="select-one" data-error-valid="select" id="_to" name="_to">
+                <option value="-1">Please select.</option>
+                {% for admin in admins %}
+                    <option value="{{ admin.email }}">{{ admin.username }}</option>
+                {% endfor %}
+            </select>
+            <h1></h1>
+            <input type="button" class="submit-button" id="_submit" name="_submit" value="Send" />
+        </form>
+        <div style="clear: both;"></div>
+    </div>
+</div>

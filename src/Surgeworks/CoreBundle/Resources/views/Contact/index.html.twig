@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %} Welcome, this is Contact {% endblock %}
+
+{% block header %}<a href="{{ path('home') }}">Home</a> - Contact{% endblock %}
+
+{% block css %}
+    {{ parent() }}
+    <link rel='stylesheet' type='text/css' media='all' href='{{ asset('bundles/surgeworkscore/css/_contact_form.css') }}' />
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('bundles/surgeworkscore/js/_contact_form.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    {{ include('SurgeworksCoreBundle:Contact:_contact_form.html.twig', {'admins' : admins}) }}
+{% endblock %}

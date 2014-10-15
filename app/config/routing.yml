@@ -1,0 +1,3 @@
+surgeworks_core:
+    resource: "@SurgeworksCoreBundle/Resources/config/routing.yml"
+    prefix:   /

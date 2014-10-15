@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %} Welcome, this is Home {% endblock %}
+
+{% block header %} Home - <a href="{{ path('contact') }}">Contact</a>{% endblock %}
+
+{% block css %}
+    {{ parent() }}
+    <link rel='stylesheet' type='text/css' media='all' href='{{ asset('bundles/surgeworkscore/css/_contact_form.css') }}' />
+    <link rel='stylesheet' type='text/css' media='all' href='{{ asset('bundles/surgeworkscore/css/_login_form.css') }}' />
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('bundles/surgeworkscore/js/jquery.vticker.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/surgeworkscore/js/_news_slider.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/surgeworkscore/js/_login_form.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    {{ include('SurgeworksCoreBundle:Home:_news_slider.html.twig') }}
+    {{ include('SurgeworksCoreBundle:Home:_login_form.html.twig') }}
+{% endblock %}

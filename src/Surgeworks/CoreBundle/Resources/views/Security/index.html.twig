@@ -1,0 +1,8 @@
+{% extends ':Security:layout.html.twig' %}
+
+{% block content %}
+    {{ parent() }}
+    <div style="margin-top: 5px; margin-left: 5px;">
+        <span style="font-weight:bold; background-color: whitesmoke;">This is secured area. Your role which is {{ role }} allows you to view <a href="{{ area }}">this page</a>.</span>
+    </div>
+{% endblock %}

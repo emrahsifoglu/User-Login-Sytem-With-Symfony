@@ -1,0 +1,42 @@
+login:
+   pattern: /login
+   defaults: { _controller: SurgeworksCoreBundle:Security:login }
+
+login_check:
+   pattern: /oauth/login_check
+   defaults: { _controller: SurgeworksCoreBundle:Security:loginCheck }
+
+login_success:
+   pattern: /oauth/
+   defaults: { _controller: SurgeworksCoreBundle:Security:index }
+
+logout:
+   pattern: /oauth/logout
+
+admin_area:
+   pattern: /oauth/admin/
+   defaults: { _controller: SurgeworksCoreBundle:Admin:index }
+
+user_area:
+   pattern: /oauth/user/
+   defaults: { _controller: SurgeworksCoreBundle:User:index }
+
+home:
+   pattern: /
+   defaults: { _controller: SurgeworksCoreBundle:Main:home }
+
+contact:
+   pattern: /contact
+   defaults: { _controller: SurgeworksCoreBundle:Main:contact }
+
+contact_form_action:
+   pattern: /contact_form_action
+   defaults: { _controller: SurgeworksCoreBundle:Main:contact }
+   requirements:
+            _method:  POST
+
+news_form_action:
+   pattern: /news/read/all
+   defaults: { _controller: SurgeworksCoreBundle:News:read }
+   #requirements:
+         #_method:  POST

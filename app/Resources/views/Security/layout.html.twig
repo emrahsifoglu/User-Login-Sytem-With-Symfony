@@ -1,0 +1,14 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %} Welcome, this is secured Area {% endblock %}
+
+{% block header %} Secured Area {% endblock %}
+
+{% block css %}
+    {{ parent() }}
+    <link rel='stylesheet' type='text/css' media='all' href='{{ asset('bundles/surgeworkscore/css/_logout_form.css') }}' />
+{% endblock %}
+
+{% block content %}
+    {{ include('SurgeworksCoreBundle:Security:_logout_form.html.twig') }}
+{% endblock %}

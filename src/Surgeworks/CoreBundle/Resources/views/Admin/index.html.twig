@@ -1,0 +1,12 @@
+{% extends ':Security:layout.html.twig' %}
+
+{% block title %} Welcome, this is Admin Security Area {% endblock %}
+
+{% block header %} Admin Secured Area {% endblock %}
+
+{% block content %}
+    {{ parent() }}
+    <div style="margin-top: 5px; margin-left: 5px;">
+        <span style="font-weight:bold; background-color: whitesmoke;">This secured are for Admins. You can return <a href="{{ path('login_success') }}">secured area</a>.</span>
+    </div>
+{% endblock %}
