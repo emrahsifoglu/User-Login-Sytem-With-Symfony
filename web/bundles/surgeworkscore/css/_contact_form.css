@@ -33,6 +33,10 @@
     float: right;
 }
 
+#contact-form-title {
+   background-image: url('../images/title.gif');
+}
+
 label {
     float: left;
     text-align: right;
